@@ -1,13 +1,5 @@
-﻿/*
- * Created by SharpDevelop.
- * User: admin
- * Date: 02.11.2021
- * Time: 14:23
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
-
+﻿using System;
+using System.Collections.Generic;
 
 namespace Zadanie
 {
@@ -15,17 +7,13 @@ namespace Zadanie
 	class Program
 	{
 		public static void Main(string[] args)
-		{
-			
-			list<DateTime[]> date = new list<DateTime[]>();
-			
+		{			
+			List<DateTime> date = new List<DateTime>();
+
 			date.Add(new DateTime(2010, 10, 01));
 			date.Add(new DateTime(2011, 10, 11));
 			date.Add(new DateTime(2012, 05, 30));
-				
-			
-			
-			
+
 			Console.WriteLine("Запуск программы (Y/N)");
 			string v = Console.ReadLine();
 			
@@ -38,15 +26,15 @@ namespace Zadanie
 						{
 							Console.WriteLine("Введите дату");
 				
-							date.add (DateTime.Parse(Console.ReadLine()));
+							date.Add(DateTime.Parse(Console.ReadLine()));
 				
-							for (int i = 0; i < date.Length; i++)
+							for (int i = 0; i < date.Count; i++)
 							Console.WriteLine(date[i]);
 						}
 			
 					else if (otv.Equals("N")) //Вывод всех дат массива.
 						{
-							for (int i = 0; i < date.Length; i++)
+							for (int i = 0; i < date.Count; i++)
 							Console.WriteLine(date[i]);
 				
 						}	
